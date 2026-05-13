@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mailservice
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: adarshvaraprasadmatam.eidiko@gmail.com
+    password: zmic cxbk dhvn lbpq
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: 9199
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:9191/eureka/

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: DoctorService
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: medicare
+    password: root
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9199
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:9191/eureka/
+
