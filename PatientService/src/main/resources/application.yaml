@@ -13,10 +13,10 @@ spring:
     password: root
     driver-class-name: oracle.jdbc.OracleDriver
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
 
 server:
   port: 9193

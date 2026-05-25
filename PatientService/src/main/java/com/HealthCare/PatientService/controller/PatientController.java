@@ -1,7 +1,10 @@
 package com.HealthCare.PatientService.controller;
 
 import com.HealthCare.PatientService.dto.PatientDetailsDto;
+import com.HealthCare.PatientService.dto.SymptomRequest;
+import com.HealthCare.PatientService.dto.SymptomResponse;
 import com.HealthCare.PatientService.entity.PatientDetails;
+import com.HealthCare.PatientService.service.AgentService;
 import com.HealthCare.PatientService.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,4 +39,10 @@ public class PatientController {
         return service.getPatientByName(patientName);
     }
 
+@Autowired
+private AgentService agent;
+    @PostMapping("/symptomanalyze")
+    public SymptomResponse symptomAnalyze(@RequestBody SymptomRequest  symptomRequest){
+        return agent.analyzeSymptom(symptomRequest);
+    }
 }

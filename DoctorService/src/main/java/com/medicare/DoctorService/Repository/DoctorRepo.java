@@ -1,4 +1,7 @@
 package com.medicare.DoctorService.Repository;
 
-public interface DoctorRepo {
+import com.medicare.DoctorService.Model.DoctorDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface DoctorRepo extends JpaRepository<DoctorDetails,Long> {
 }

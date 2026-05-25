@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: MedicareServer
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: medicare
+    password: root
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  eureka:
+    client:
+      enabled: true
+      service-url:
+        defaultZone: http://localhost:9191/eureka/
+
+
+
+
+server:
+  port: 9189
+
